@@ -1,0 +1,23 @@
+.pagination-container {
+    display: flex;
+}
+
+button {
+    color: #FDFFFC;
+    height: 35px;
+    width: 35px;
+    background-color: #140D4F;
+    border-radius: 25px;
+    border: none;
+    cursor: pointer;
+    margin: 1em;
+}
+
+button:disabled {
+    background-color: #868784;
+    cursor: default;
+}
+
+.active {
+    background-color: #5438DC;
+}
