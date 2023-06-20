@@ -2,7 +2,7 @@ import React, { useState, useEffect } from "react";
 import { getData } from "../utils/api";
 import "./LandingPage.css";
 import Pagination from "./Pagination";
-import { FiEdit, FiTrash2, FiCheck, FiXCircle } from "react-icons/fi";
+import { FiEdit, FiTrash2, FiCheck } from "react-icons/fi";
 
 function LandingPage() {
     const [loading, setLoading] = useState(true);
@@ -44,6 +44,7 @@ function LandingPage() {
     };
     const editItem = (id) => {
         var arr = JSON.parse(localStorage.getItem("data"));
+        console.log(arr);
         let itemId = arr.findIndex((obj) => obj.id === id);
         setEdit(id);
         let editUser = items[itemId];
@@ -192,12 +193,6 @@ function LandingPage() {
                                                             size={25}
                                                             onClick={() => makeChanges()}
                                                             color="green"
-                                                        />
-                                                        <FiXCircle
-                                                            size={25}
-                                                            color="red"
-                                                            cursor="pointer"
-                                                            onClick={() => editItem(null)}
                                                         />
                                                     </div>
                                                 ) : (
