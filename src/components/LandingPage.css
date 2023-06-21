@@ -59,3 +59,8 @@ th {
     width: 10em;
     background-color: #FF5A5F;
 }
+
+.checked {
+    background: #9c9398;
+    color: #ffff;
+}

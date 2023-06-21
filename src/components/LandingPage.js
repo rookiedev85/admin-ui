@@ -123,7 +123,7 @@ function LandingPage() {
                                     <th>actions</th>
                                 </tr>
                                 {currentItems.map((item, idx) => (
-                                    <tr key={idx}>
+                                    <tr key={idx} className={checked.includes(item) ? "checked" : "non-checked" }>
                                         {edit === item.id ? (
                                             <>
                                                 <td>
